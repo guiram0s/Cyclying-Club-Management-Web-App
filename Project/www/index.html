@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTSBike - Clube de Ciclismo</title>
+    <link rel="stylesheet" href="/www/styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ESTSBike - Clube de Ciclismo</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:showSection('members')">Membros</a></li>
+                <li><a href="javascript:showSection('events')">Eventos</a></li>
+                <li><a href="javascript:showSection('eventTypes')">Tipos de Eventos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="members" class="hidden">
+            <h2>Gestão de Membros</h2>
+            <div id="members-list"></div>
+            <button onclick="Member.create()">Criar</button>
+            <button onclick="Member.edit()">Editar</button>
+            <button onclick="Member.deleteMember()">Apagar</button>
+            <div id="member-form-container"></div>
+        </section>
+
+        <section id="events" class="hidden">
+            <h2>Gestão de Eventos</h2>
+            <div id="events-list"></div>
+            <button onclick="Event.create()">Criar</button>
+            <button onclick="Event.edit()">Editar</button>
+            <button onclick="Event.delete()">Apagar</button>
+            <button onclick="Event.save()">Gravar</button>
+            <button onclick="Event.cancel()">Cancelar</button>
+            <div id="event-form" class="hidden">
+                <h3>Detalhes do Evento</h3>
+                <label for="event-type">Tipo:</label>
+                <select id="event-type"></select>
+                <br><br>
+                <label for="event-description">Descrição:</label>
+                <input type="text" id="event-description" />
+                <br><br>
+                <label for="event-date">Data:</label>
+                <input type="date" id="event-date" />
+            </div>
+            <div id="event-error" style="color: red; margin-top: 1rem;"></div>
+        </section>
+        
+
+        <section id="eventTypes" class="hidden">
+            <h2>Gestão de Tipos de Eventos</h2>
+            <div id="event-types-list"></div>
+            <button onclick="EventType.create()">Criar</button>
+            <button onclick="EventType.edit()">Editar</button>
+            <button onclick="EventType.delete()">Apagar</button>
+            <div id="error-message" style="color: red; margin-top: 1rem;"></div>
+        </section>
+        
+    </main>
+
+    <script src="/www/scripts/app.js"></script>
+</body>
+</html>

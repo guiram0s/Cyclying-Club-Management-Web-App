@@ -1,0 +1,26 @@
+{
+  "name": "projpw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "npm run docs:www-scripts && npm run docs:routes && npm run docs:scripts",
+    "docs:www-scripts": "for %f in (www\\scripts\\*.js) do jsdoc %f -d docs\\www-scripts\\%~nf",
+    "docs:routes": "for %f in (routes\\*.js) do jsdoc %f -d docs\\routes\\%~nf",
+    "docs:scripts": "for %f in (scripts\\*.js) do jsdoc %f -d docs\\scripts\\%~nf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jsdoc": "^4.0.4"
+  }
+}

@@ -1,0 +1,120 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #005f73;
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #94d2bd;
+}
+
+/* Estilo principal */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #005f73;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #005f73;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0a9396;
+}
+
+button:active {
+    background-color: #94d2bd;
+}
+
+/* Listagem */
+#members-list, #events-list, #event-types-list {
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+
+#members-list div, 
+#events-list div, 
+#event-types-list div {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+#members-list div:last-child, 
+#events-list div:last-child, 
+#event-types-list div:last-child {
+    border-bottom: none;
+}
+
+div:hover {
+    background-color: #e0f2f1;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #f0f8ff;
+}
