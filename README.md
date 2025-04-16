@@ -24,12 +24,24 @@ The project follows a route-based architecture with a clear separation between f
 
 ```
 Project/
-├── backend/             # Node.js server logic (routes, controllers)
-├── database/            # SQL scripts and MySQL connection
-├── public/              # Static files (HTML, CSS, JS)
-├── scripts/             # JavaScript for DOM handling and fetch calls
+├── database/            # SQL scripts and MySQL inserts
+├── docs/                # JavaDocs and documentation
+├── node_modules/        # Node.js dependencies
+├── routes/              # Express route files (events, members, event types)
+│   ├── eventRoutes.js
+│   ├── eventTypesRoutes.js
+│   └── membersRoutes.js
+├── scripts/             # Backend configuration scripts
+│   ├── connection-options.js
+│   └── db.js
+├── www/                 # Frontend files
+│   ├── images/          # Images used in the frontend
+│   ├── scripts/
+│   │   └── app.js       # Main frontend logic
+│   └── styles/
+│   │   └── styles.css   # Main stylesheet
+│   └──index.html        # Main frontend file
 ├── index.js             # Main entry point (Express server)
-├── package.json         # Project dependencies and configuration
 └── README.md            # This file :)
 ```
 
@@ -61,16 +73,19 @@ Project/
        host: 'localhost',
        user: 'root',
        password: '',
-       database: 'watchlistv4'
+       database: 'cycling_club_db'
      });
      ```
 
 4. **Start the Server**:
    ```bash
-   node index.js
+   node index.js run
    ```
 
-   The application will be available at `http://localhost:3000`.
+5. **Start the Frontend**:
+
+   If you are using VSCode, install the Live Server extension and open `index.html` in the browser using Go Live (bottom right).
+   Otherwise, just navigate to `index.html` using a local server or your browser with the correct path.
 
 ## 📌 Main REST Endpoints
 
@@ -91,3 +106,4 @@ Project/
 ## 👤 Author
 
 Developed by [@guiram0s](https://github.com/guiram0s)
+
